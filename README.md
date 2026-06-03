@@ -65,7 +65,8 @@ Launch Vivado:
 and using the GUI: **File → Project → New** and follow the wizard, selecting XC7A35TICSG324-1L.
 
 Add source files:
-**GUI:** Sources panel → right-click **Constraints** → Add Sources → Add or create design sources → select the (*.v)//
+**GUI:** Sources panel → right-click **Constraints** → Add Sources → Add or create design sources → select the (*.v)
+
 **GUI:** Sources panel → right-click **Constraints** → Add Sources → Add or create constraints → select the XDC
 
 PS: Load the provided `murax_arty_a7_final.xdc` to your project.
