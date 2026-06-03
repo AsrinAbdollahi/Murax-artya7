@@ -11,7 +11,7 @@
 ## 1: Install Vivado 2024.2
 
 Download the Linux self-extracting installer from AMD/Xilinx:
-   https://www.xilinx.com/support/download.html
+  https://www.xilinx.com/support/download/index.html/content/xilinx/en/downloadNav/vivado-design-tools.html
    
 After installation, open the Terminal and source the settings:
    ```bash
