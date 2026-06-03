@@ -62,35 +62,15 @@ Launch Vivado:
    source /home/<user>/vivado/Vivado/2024.2/settings64.sh
    vivado
    ```
-and using the GUI: **File → Project → New** and follow the wizard, selecting XC7A35TICSG324-1L:
+and using the GUI: **File → Project → New** and follow the wizard, selecting XC7A35TICSG324-1L.
+
+Add source files:
+**GUI:** Sources panel → right-click **Constraints** → Add Sources → Add or create design sources → select the (*.v)
+**GUI:** Sources panel → right-click **Constraints** → Add Sources → Add or create constraints → select the XDC
+
+PS: Load the provided `murax_arty_a7_final.xdc` to your project.
 
 
-## Step 5 — Add Constraints File
-
-Add the provided `murax_arty_a7_final.xdc` to your project:
-
-**GUI:** Sources panel → right-click **Constraints** → Add Sources → Add Files → select the XDC
-
-**Tcl:**
-```tcl
-add_files -fileset constrs_1 /path/to/murax_arty_a7_final.xdc
-```
-
-This XDC assigns all 104 top-level ports:
-
-| Port | Bits | Physical pins |
-|---|---|---|
-| `io_mainClk` | 1 | E3 (100 MHz oscillator) |
-| `io_asyncReset` | 1 | C2 (ck_rst button) |
-| `io_uart_txd/rxd` | 2 | D10 / A9 (FT2232 USB-UART) |
-| `io_jtag_tck/tdi/tdo/tms` | 4 | PMOD JA lower row |
-| `io_gpioA_write[0:7]` | 8 | LD0–LD3 + LD4/LD5 RGB |
-| `io_gpioA_write[8:31]` | 24 | PMOD JB / JC / JD |
-| `io_gpioA_read[0:7]` | 8 | SW0–SW3 + BTN0–BTN3 |
-| `io_gpioA_read[8:31]` | 24 | ChipKit ck_io headers |
-| `io_gpioA_writeEnable[0:31]` | 32 | Spare pins (false path) |
-
----
 
 ## Step 6 — Synthesize
 
