@@ -69,7 +69,7 @@ Add source files:
 - **GUI:** Sources panel → right-click **Constraints** → Add Sources → Add or create design sources → select the (*.v)
 - **GUI:** Sources panel → right-click **Constraints** → Add Sources → Add or create constraints → select the XDC
 
-PS: Load the provided `murax_arty_a7_final.xdc` to your project.
+PS: Load the provided `Murax_ArtyA7.xdc` to your project.
 then:
 - **GUI:** Flow Navigator → **Run Synthesis**
 - **GUI:** Flow Navigator → **Run Implementation**
