@@ -24,8 +24,8 @@ After installation, open the Terminal and source the settings:
 To run a bitstream into an FPGA, Vivado needs a Verilog (*.v) and a Constraint (*.xdc) file.
 For (*.v), you need to install Ubuntu to install sbt, following https://github.com/SpinalHDL/VexRiscv#dependencies
 
-# JAVA JDK 8
 ```bash
+# JAVA JDK 8
 sudo add-apt-repository -y ppa:openjdk-r/ppa
 sudo apt-get update
 sudo apt-get install openjdk-8-jdk -y
@@ -41,29 +41,22 @@ sudo apt-get update
 sudo apt-get install sbt
 ```
 
-## Step 3 — Generate Murax Verilog from SpinalHDL
+## 3: Generate Murax Verilog from SpinalHDL
+SpinalHdl provides different versions of Vexricv in src/main/scala/vexriscv/demo
+As a sample, Murax-vexriscv https://github.com/SpinalHDL/VexRiscv#murax-soc
 
-1. Clone VexRiscv:
    ```bash
+   #Clone VexRiscv:
    git clone https://github.com/SpinalHDL/VexRiscv.git
    cd VexRiscv
    ```
-
-2. Generate the Murax SoC Verilog:
    ```bash
+   #Generate the Murax SoC Verilog:
    sbt "runMain vexriscv.demo.Murax"
    ```
    This produces `Murax.v` and `Murax.bin` in the current directory.
 
-3. Copy the generated files to your project:
-   ```bash
-   mkdir -p ~/vexriscv/vexriscv.srcs/sources_1/imports
-   cp Murax.v ~/vexriscv/vexriscv.srcs/sources_1/imports/
-   ```
-
----
-
-## Step 4 — Create Vivado Project
+## 4: Create Vivado Project
 
 Launch Vivado and run in the Tcl console:
 
@@ -246,7 +239,13 @@ program_hw_devices [get_hw_devices xc7a35t_0]
 ```
 
 ---
+3. Copy the generated files to your project:
+   ```bash
+   mkdir -p ~/vexriscv/vexriscv.srcs/sources_1/imports
+   cp Murax.v ~/vexriscv/vexriscv.srcs/sources_1/imports/
+   ```
 
+---
 ## Board LED Reference (Arty A7-35T)
 
 | LED | Color | Pin | Meaning in Murax |
