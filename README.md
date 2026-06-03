@@ -72,10 +72,8 @@ Add source files:
 
 PS: Load the provided `murax_arty_a7_final.xdc` to your project.
 then:
-**GUI:** Flow Navigator → **Run Synthesis**
-
+**GUI:** Flow Navigator → **Run Synthesis**add< br / > 
 **GUI:** Flow Navigator → **Run Implementation**
-
 **GUI:** Flow Navigator → **Generate Bitstream**
 
 Confirm all flows completed with no error, and the bitstream was created successfully:
