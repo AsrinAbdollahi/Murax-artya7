@@ -69,60 +69,19 @@ Add source files:
 **GUI:** Sources panel → right-click **Constraints** → Add Sources → Add or create constraints → select the XDC
 
 PS: Load the provided `murax_arty_a7_final.xdc` to your project.
-
-
-
-## Step 6 — Synthesize
-
+then:
 **GUI:** Flow Navigator → **Run Synthesis**
-
-**Tcl:**
-```tcl
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-```
-
-Expected result: no errors, ~550–850 LUT depending on Murax config.
-
----
-
-## Step 7 — Implement
-
 **GUI:** Flow Navigator → **Run Implementation**
-
-**Tcl:**
-```tcl
-launch_runs impl_1 -jobs 8
-wait_on_run impl_1
-```
-
-Check for timing violations after:
-```tcl
-report_timing_summary -warn_on_violation
-```
-
----
-
-## Step 8 — Generate Bitstream
-
 **GUI:** Flow Navigator → **Generate Bitstream**
 
-**Tcl:**
+Confirm all flows completed with no error, and the bitstream was created successfully:
 ```tcl
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
+get_property DIRECTORY [get_runs impl_1]
+get_property STATUS [get_runs impl_1]
 ```
-
-Confirm the bitstream was created:
-```tcl
-file exists [get_property DIRECTORY [get_runs impl_1]]/Murax.bit
-```
-Returns `1` = success. The file is at:
-```
+The generated file, by default, is located in:
 /home/<user>/vexriscv/vexriscv.runs/impl_1/Murax.bit
-```
 
----
 
 ## Step 9 — Program the FPGA
 
