@@ -67,16 +67,13 @@ and using the GUI: **File → Project → New** and follow the wizard, selecting
 Add source files:
 
 - **GUI:** Sources panel → right-click **Constraints** → Add Sources → Add or create design sources → select the (*.v)
-
 - **GUI:** Sources panel → right-click **Constraints** → Add Sources → Add or create constraints → select the XDC
 
 PS: Load the provided `murax_arty_a7_final.xdc` to your project.
 then:
-**GUI:** Flow Navigator → **Run Synthesis**
-
-**GUI:** Flow Navigator → **Run Implementation**
-
-**GUI:** Flow Navigator → **Generate Bitstream**
+- **GUI:** Flow Navigator → **Run Synthesis**
+- **GUI:** Flow Navigator → **Run Implementation**
+- **GUI:** Flow Navigator → **Generate Bitstream**
 
 Confirm all flows completed with no error, and the bitstream was created successfully:
 ```tcl
@@ -97,11 +94,11 @@ get_property PROGRAM.FILE [get_hw_devices xc7a35t_0]
 
 2. Open Hardware Manager:
 
-**GUI:** Flow Navigator → **Open Hardware Manager** → **Open Target** → **Auto Connect**
+- **GUI:** Flow Navigator → **Open Hardware Manager** → **Open Target** → **Auto Connect**
 
 3. Set the generated bitstream file and program.
 
-**GUI:** Right-click `xc7a35t_0` → **Program Device** → browse to `Murax.bit` → **Program**
+- **GUI:** Right-click `xc7a35t_0` → **Program Device** → browse to `Murax.bit` → **Program**
 
 ## Common Errors
 
