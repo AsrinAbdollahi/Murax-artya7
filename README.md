@@ -105,7 +105,7 @@ get_property PROGRAM.FILE [get_hw_devices xc7a35t_0]
 **[Error] End of startup status: LOW**
 FPGA did not configure successfully. Most common causes:
 - Wrong file selected, make sure it is `Murax.bit` not the Vivado installer `.bin`
-- Bitstream not generated — run Step 8 first
+- Bitstream not generated — run Step 4 again
 - Pin constraint hitting a configuration pin — re-check XDC
 
 **[Error] set_property' expects at least one object**
