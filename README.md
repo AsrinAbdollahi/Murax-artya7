@@ -102,13 +102,13 @@ get_property PROGRAM.FILE [get_hw_devices xc7a35t_0]
 
 ## Common Errors
 
-### `End of startup status: LOW`
+`End of startup status: LOW`
 FPGA did not configure successfully. Most common causes:
 - Wrong file selected, make sure it is `Murax.bit` not the Vivado installer `.bin`
 - Bitstream not generated — run Step 8 first
 - Pin constraint hitting a configuration pin — re-check XDC
 
-### `'set_property' expects at least one object`
+'set_property' expects at least one object`
 A port name in the XDC does not exist in the netlist. Run:
 ```tcl
 get_ports *
