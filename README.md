@@ -1,7 +1,4 @@
 # Murax SoC on Arty A7-35T
-## From Vivado Install to Bitstream — Complete Guide
-
----
 
 ## Requirements
 
@@ -10,41 +7,18 @@
 - ~100 GB free disk space (Vivado full install)
 - Java 11+ (for SpinalHDL)
 - sbt (Scala build tool)
-- USB-A to micro-USB cable
 
----
+## 1: Install Vivado 2024.2
 
-## Step 1 — Install Vivado 2024.2
-
-1. Download the Linux self-extracting installer from AMD/Xilinx:
+Download the Linux self-extracting installer from AMD/Xilinx:
    https://www.xilinx.com/support/download.html
-   Choose: **Vivado ML Edition — Linux Self Extracting Web Installer**
-
-2. Make it executable and run:
-   ```bash
-   chmod +x FPGAs_AdaptiveSoCs_Unified_2024.2_*_Lin64.bin
-   ./FPGAs_AdaptiveSoCs_Unified_2024.2_*_Lin64.bin
-   ```
-   > Do NOT use this `.bin` file as a bitstream — it is the installer only.
-
-3. In the GUI installer:
-   - Select **Vivado**
-   - Edition: **Vivado ML Standard** (free) or **Enterprise** (licensed)
-   - Devices: enable **Artix-7** only to save disk space
-   - Install path: `/home/<user>/vivado` (default)
-
-4. After install, source the settings:
+   
+After installation, open the Terminal and source the settings:
    ```bash
    source /home/<user>/vivado/Vivado/2024.2/settings64.sh
+   vivado
    ```
-   Add this line to `~/.bashrc` to make it permanent.
-
-5. Install Digilent cable drivers (required for hardware programming):
-   ```bash
-   cd /home/<user>/vivado/Vivado/2024.2/data/xicom/cable_drivers/lin64/install_script/install_drivers/
-   sudo ./install_drivers
-   ```
-   Then replug the Arty A7 USB cable.
+   You can add this line to `~/.bashrc` to make it permanent.
 
 ---
 
