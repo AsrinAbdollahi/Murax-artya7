@@ -57,20 +57,13 @@ As a sample, Murax-vexriscv https://github.com/SpinalHDL/VexRiscv#murax-soc
    This produces `Murax.v` and `Murax.bin` in the current directory.
 
 ## 4: Create Vivado Project
+Launch Vivado:
+   ```bash
+   source /home/<user>/vivado/Vivado/2024.2/settings64.sh
+   vivado
+   ```
+and using the GUI: **File → Project → New** and follow the wizard, selecting XC7A35TICSG324-1L:
 
-Launch Vivado and run in the Tcl console:
-
-```tcl
-create_project vexriscv /home/<user>/vexriscv -part xc7a35ticsg324-1L
-add_files /home/<user>/vexriscv/vexriscv.srcs/sources_1/imports/Murax.v
-add_files -fileset constrs_1 /path/to/murax_arty_a7_final.xdc
-set_property top Murax [current_fileset]
-update_compile_order -fileset sources_1
-```
-
-Or use the GUI: **File → Project → New** and follow the wizard selecting XC7A35TICSG324-1L.
-
----
 
 ## Step 5 — Add Constraints File
 
